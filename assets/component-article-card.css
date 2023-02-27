@@ -74,6 +74,7 @@
 }
 
 .article-card__excerpt {
+  display:none;
   width: 100%;
   margin-top: 1.2rem;
 }

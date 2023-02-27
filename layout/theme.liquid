@@ -222,7 +222,7 @@
     </main>
 {% if page != index %}
     {% section 'footer' %}
-    
+    {{ page.handle }}
     {% endif %}
 
     <ul hidden>
@@ -262,3 +262,32 @@
     {%- endif -%}
   </body>
 </html>
+
+
+{% if template == 'index' %}
+<style type="text/css">
+  
+.header {
+  position:absolute;
+}
+
+  .header__menu-item {
+  padding: 1.2rem;
+  text-decoration: none;
+  /*color: rgba(var(--color-foreground), 0.75);*/
+  color:white;
+}
+
+.header__menu-item:hover {
+  /*color: rgb(var(--color-foreground));*/
+  color:white;
+}
+
+  .header__active-menu-item {
+  transition: text-decoration-thickness var(--duration-short) ease;
+  color:white;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+  </style>
+{% endif %}
